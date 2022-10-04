@@ -15,35 +15,35 @@ Potion.init(
       autoIncrement: true,
       allowNull: false
     },
-    effect1_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'effect',
-          key: 'id'
-        },
-        allowNull: false
-    },
-    effect2_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'effect',
-          key: 'id'
-        }
-    },
-    effect3_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'effect',
-          key: 'id'
-        }
-    },
-    effect4_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'effect',
-          key: 'id'
-        }
-    },
+    // effect1_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'effect',
+    //       key: 'id'
+    //     },
+    //     allowNull: false
+    // },
+    // effect2_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'effect',
+    //       key: 'id'
+    //     }
+    // },
+    // effect3_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'effect',
+    //       key: 'id'
+    //     }
+    // },
+    // effect4_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'effect',
+    //       key: 'id'
+    //     }
+    // },
   },
   {
     sequelize,

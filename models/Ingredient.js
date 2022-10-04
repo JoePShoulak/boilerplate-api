@@ -27,45 +27,11 @@ Ingredient.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // effect1_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'effect',
-        //         key: 'id'
-        //     },
-        //     allowNull: false
-        // },
-        // effect2_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'effect',
-        //         key: 'id'
-        //     },
-        //     allowNull: false
-        // },
-        // effect3_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'effect',
-        //         key: 'id'
-        //     },
-        //     allowNull: false
-        // },
-        // effect4_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'effect',
-        //         key: 'id'
-        //     },
-        //     allowNull: false
-        // },
         weight: {
             type: DataTypes.FLOAT,
-            allowNull: false
         },
         base_value: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
         }
     },
     {

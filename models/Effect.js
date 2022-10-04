@@ -18,14 +18,7 @@ Effect.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    ingredient_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'ingredient',
-        key: 'id'
-      }
-    },
+    }
   },
   {
     sequelize,

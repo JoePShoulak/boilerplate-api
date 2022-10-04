@@ -2,6 +2,7 @@ const User = require("./User");
 const Ingredient = require("./Ingredient")
 const Effect = require("./Effect")
 const Potion = require("./Potion")
+const IngredientEffect = require("./IngredientEffect")
 
 /* Every USER has
    - MANY favorite Potions
@@ -19,14 +20,18 @@ const Potion = require("./Potion")
    - MANY Effects 
 */
 
-Effect.belongsToMany(Ingredient, {
+Ingredient.belongsToMany(Effect, {
+    through: IngredientEffect,
+    as: 'ingredient_with_effect',
     foreignKey: 'ingredient_id'
-});
-
-Ingredient.hasMany(Effect, {
-    foreignKey: 'ingredient_id'
-});
+  });
+  
+  Effect.belongsToMany(Ingredient, {
+    through: IngredientEffect,
+    as: 'ingredient_with_effect',
+    foreignKey: 'effect_id'
+  });
 
 // create associations
-module.exports = { User, Ingredient, Effect, Potion };
+module.exports = { User, Ingredient, Effect, Potion, IngredientEffect };
 
