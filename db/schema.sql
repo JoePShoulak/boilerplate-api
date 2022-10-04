@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS boilerplate;
+DROP DATABASE IF EXISTS skyrim;
 
-CREATE DATABASE boilerplate;
+CREATE DATABASE skyrim;
