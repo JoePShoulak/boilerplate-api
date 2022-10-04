@@ -6,6 +6,14 @@ const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Ingredient extends Model { }
 
+/* Specific ingredient Effects can have
+  - Magnitude multipliers
+  - Price multipliers
+  - Duration multipliers
+*/ 
+
+// TODO: Incorp skyrim gameID (Hex)
+
 // set up fields and rules for Product model
 Ingredient.init(
     {
@@ -19,38 +27,38 @@ Ingredient.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        effect1_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'effect',
-                key: 'id'
-            },
-            allowNull: false
-        },
-        effect2_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'effect',
-                key: 'id'
-            },
-            allowNull: false
-        },
-        effect3_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'effect',
-                key: 'id'
-            },
-            allowNull: false
-        },
-        effect4_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'effect',
-                key: 'id'
-            },
-            allowNull: false
-        },
+        // effect1_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'effect',
+        //         key: 'id'
+        //     },
+        //     allowNull: false
+        // },
+        // effect2_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'effect',
+        //         key: 'id'
+        //     },
+        //     allowNull: false
+        // },
+        // effect3_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'effect',
+        //         key: 'id'
+        //     },
+        //     allowNull: false
+        // },
+        // effect4_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'effect',
+        //         key: 'id'
+        //     },
+        //     allowNull: false
+        // },
         weight: {
             type: DataTypes.FLOAT,
             allowNull: false
