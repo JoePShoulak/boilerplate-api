@@ -25,4 +25,36 @@ router.get('/', (req, res) => {
   });
 });
 
+// get all ingredients with certain effect
+router.get('/:id', (req, res) => {
+    // find all ingredients
+    Effect.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'name'
+        ],
+        include: [
+            {
+                model: Ingredient,
+                attributes: [
+                    'id',
+                    'name',
+                    'weight',
+                    'base_value'],
+                through: IngredientEffect,
+                as: 'ingredient_with_effect'
+            }
+        ]
+    })
+        .then(dbEffectData => res.json(dbEffectData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+
+});
+
 module.exports = router;
