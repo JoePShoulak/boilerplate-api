@@ -25,6 +25,18 @@ IngredientEffect.init(
         model: 'effect',
         key: 'id'
       }
+    },
+    magnitude: {
+        type: DataTypes.FLOAT,
+        defaultValue: 1
+    },
+    cost: {
+        type: DataTypes.FLOAT,
+        defaultValue: 1
+    },
+    duration: {
+        type: DataTypes.FLOAT,
+        defaultValue: 1
     }
   },
   {

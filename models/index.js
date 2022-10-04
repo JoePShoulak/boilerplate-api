@@ -20,6 +20,8 @@ const IngredientEffect = require("./IngredientEffect")
    - MANY Effects 
 */
 
+
+
 Ingredient.belongsToMany(Effect, {
     through: IngredientEffect,
     as: 'ingredient_with_effect',

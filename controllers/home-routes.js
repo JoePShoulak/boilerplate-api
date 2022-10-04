@@ -4,30 +4,16 @@ const { User } = require('../models');
 
 
 // router.get('/', (req, res) => {
-//     Post.findAll({
+//     Ingredient.findAll({
 //         attributes: [
 //             'id',
-//             'post_url',
-//             'title',
-//             'created_at',
-//             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-//         ],
-//         include: [
-//             {
-//                 model: Comment,
-//                 attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-//                 include: {
-//                     model: User,
-//                     attributes: ['username']
-//                 }
-//             },
-//             {
-//                 model: User,
-//                 attributes: ['username']
-//             }
+//             'name',
+//             'weight',
+//             'base_value',
+//             [sequelize.literal('(SELECT COUNT(*) FROM ingredient_effect WHERE ingredient.id = ingredient_effect.ingredient_id)'), 'vote_count']
 //         ]
 //     })
-//     .then(dbPostData => {
+//     .then(dbIngredientData => {
 //         const posts = dbPostData.map(post => post.get({ plain: true }));
 //         // pass a single post object into the homepage template
 //         res.render('homepage', { posts });
