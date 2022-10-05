@@ -7,15 +7,16 @@ const ingredientEffectData = []
 effectSeeds.forEach(effect => {
   ingredientSeeds.forEach(ingredient => {
     const currentObj = { effect_id: effect.id, ingredient_id: ingredient.id }
+    const checkList = () => {  if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)} }
     switch (effect.name) {
       case ingredient.effect1_name:
-        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+        checkList()
       case ingredient.effect2_name:
-        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+        checkList()
       case ingredient.effect3_name:
-        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+        checkList()
       case ingredient.effect4_name:
-        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+       checkList()
       default: return
     } 
   })
