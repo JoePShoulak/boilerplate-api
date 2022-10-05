@@ -1,55 +1,25 @@
 const { IngredientEffect } = require('../models');
+const effectSeeds = require('./effect_data.json')
+const ingredientSeeds = require('./ingredient_data.json')
 
-const ingredientEffectData = [
-  {
-    ingredient_id: 1,
-    effect_id: 1,
-  },
-//   {
-//     ingredient_id: 1,
-//     effect_id: 7,
-//   },
-//   {
-//     ingredient_id: 1,
-//     effect_id: 8,
-//   },
-//   {
-//     ingredient_id: 2,
-//     effect_id: 6,
-//   },
-//   {
-//     ingredient_id: 3,
-//     effect_id: 1,
-//   },
-//   {
-//     ingredient_id: 3,
-//     effect_id: 3,
-//   },
-//   {
-//     ingredient_id: 3,
-//     effect_id: 4,
-//   },
-//   {
-//     ingredient_id: 3,
-//     effect_id: 5,
-//   },
-//   {
-//     ingredient_id: 4,
-//     effect_id: 1,
-//   },
-//   {
-//     ingredient_id: 4,
-//     effect_id: 2,
-//   },
-//   {
-//     ingredient_id: 4,
-//     effect_id: 8,
-//   },
-//   {
-//     ingredient_id: 5,
-//     effect_id: 3,
-//   },
-];
+const ingredientEffectData = []
+
+effectSeeds.forEach(effect => {
+  ingredientSeeds.forEach(ingredient => {
+    const currentObj = { effect_id: effect.id, ingredient_id: ingredient.id }
+    switch (effect.name) {
+      case ingredient.effect1_name:
+        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+      case ingredient.effect2_name:
+        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+      case ingredient.effect3_name:
+        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+      case ingredient.effect4_name:
+        if (!ingredientEffectData.includes(currentObj)) {ingredientEffectData.push(currentObj)}
+      default: return
+    } 
+  })
+})
 
 const seedIngredientEffects = () => IngredientEffect.bulkCreate(ingredientEffectData);
 

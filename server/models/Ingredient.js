@@ -18,9 +18,8 @@ class Ingredient extends Model { }
 Ingredient.init(
     {
         id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             primaryKey: true,
-            autoIncrement: true,
             allowNull: false
         },
         name: {
@@ -30,7 +29,7 @@ Ingredient.init(
         weight: {
             type: DataTypes.FLOAT,
         },
-        base_value: {
+        value: {
             type: DataTypes.INTEGER
         }
     },

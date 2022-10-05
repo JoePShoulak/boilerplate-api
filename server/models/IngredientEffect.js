@@ -26,18 +26,18 @@ IngredientEffect.init(
         key: 'id'
       }
     },
-    magnitude: {
-        type: DataTypes.FLOAT,
-        defaultValue: 1
-    },
-    cost: {
-        type: DataTypes.FLOAT,
-        defaultValue: 1
-    },
-    duration: {
-        type: DataTypes.FLOAT,
-        defaultValue: 1
-    }
+    // magnitude: {
+    //     type: DataTypes.FLOAT,
+    //     defaultValue: 1
+    // },
+    // cost: {
+    //     type: DataTypes.FLOAT,
+    //     defaultValue: 1
+    // },
+    // duration: {
+    //     type: DataTypes.FLOAT,
+    //     defaultValue: 1
+    // }
   },
   {
     sequelize,

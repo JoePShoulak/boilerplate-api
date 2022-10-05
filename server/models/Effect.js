@@ -10,14 +10,25 @@ class Effect extends Model {}
 Effect.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: false
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    base_mag: {
+      type: DataTypes.INTEGER,
+      default: null
+    },
+    base_dur: {
+      type: DataTypes.FLOAT,
+      default: null
+    },
+    base_cost: {
+      type: DataTypes.FLOAT,
+      default: null
     }
   },
   {
